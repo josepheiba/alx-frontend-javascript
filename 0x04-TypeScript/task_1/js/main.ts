@@ -37,9 +37,11 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
+function printTeacher(firstName: string, lastName: string): string {
+  const obj = { firstName, lastName };
+  const { firstName: f, lastName: l } = obj;
+  return `${firstName[0]}. ${lastName}`;
+}
 
 console.log(printTeacher("John", "Doe"));
 
