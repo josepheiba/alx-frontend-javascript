@@ -56,13 +56,13 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
-class StudentClass implements StudentClassInterface {
-  private _firstName!: string;
-  private _lastName!: string;
+class StudentClass {
+  firstName: string;
+  lastName: string;
 
   constructor(firstName: string, lastName: string) {
-    this._firstName = firstName;
-    this._lastName = lastName;
+    this.firstName = firstName;
+    this.lastName = lastName;
   }
 
   workOnHomework(): string {
@@ -70,7 +70,7 @@ class StudentClass implements StudentClassInterface {
   }
 
   displayName(): string {
-    return this._firstName;
+    return this.firstName;
   }
 }
 
